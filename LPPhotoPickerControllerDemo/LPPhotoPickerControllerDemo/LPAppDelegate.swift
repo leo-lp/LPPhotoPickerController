@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  LPAppDelegate.swift
 //  LPPhotoPickerControllerDemo
 //
 //  Created by pengli on 2018/6/28.
@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class LPAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
