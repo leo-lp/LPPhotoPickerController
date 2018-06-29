@@ -11,9 +11,9 @@
 		1817495320E47E440056D7DA /* LPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1817495120E47E440056D7DA /* LPMain.storyboard */; };
 		1817495520E47E450056D7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1817495420E47E450056D7DA /* Assets.xcassets */; };
 		1817495820E47E450056D7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1817495620E47E450056D7DA /* LaunchScreen.storyboard */; };
-		1827E69720E4DF0400C89D11 /* LPPhotoPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1827E69620E4DF0400C89D11 /* LPPhotoPickerController.framework */; };
-		1827E69820E4DF0400C89D11 /* LPPhotoPickerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1827E69620E4DF0400C89D11 /* LPPhotoPickerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1827E69B20E4E05600C89D11 /* LPRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E69A20E4E05600C89D11 /* LPRootViewController.swift */; };
+		1873251020E60E5300D2738D /* LPPhotoPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; };
+		1873251120E60E5300D2738D /* LPPhotoPickerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18DDDC8620E4E72900AA8E45 /* LPRootSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8520E4E72900AA8E45 /* LPRootSwitchCell.swift */; };
 		18DDDC8A20E4E75500AA8E45 /* LPRootTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8920E4E75500AA8E45 /* LPRootTextFieldCell.swift */; };
 		18DDDC8C20E4E89100AA8E45 /* LPRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */; };
@@ -27,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1827E69820E4DF0400C89D11 /* LPPhotoPickerController.framework in Embed Frameworks */,
+				1873251120E60E5300D2738D /* LPPhotoPickerController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +41,8 @@
 		1817495420E47E450056D7DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1817495720E47E450056D7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1817495920E47E450056D7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1827E69620E4DF0400C89D11 /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1827E69A20E4E05600C89D11 /* LPRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootViewController.swift; sourceTree = "<group>"; };
+		1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DDDC8520E4E72900AA8E45 /* LPRootSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootSwitchCell.swift; sourceTree = "<group>"; };
 		18DDDC8920E4E75500AA8E45 /* LPRootTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootTextFieldCell.swift; sourceTree = "<group>"; };
 		18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootModel.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1827E69720E4DF0400C89D11 /* LPPhotoPickerController.framework in Frameworks */,
+				1873251020E60E5300D2738D /* LPPhotoPickerController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		1817494120E47E440056D7DA = {
 			isa = PBXGroup;
 			children = (
-				1827E69620E4DF0400C89D11 /* LPPhotoPickerController.framework */,
+				1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */,
 				1817494C20E47E440056D7DA /* LPPhotoPickerControllerDemo */,
 				1817494B20E47E440056D7DA /* Products */,
 			);
