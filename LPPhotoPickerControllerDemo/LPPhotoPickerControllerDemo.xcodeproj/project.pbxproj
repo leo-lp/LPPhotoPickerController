@@ -14,8 +14,7 @@
 		1827E69B20E4E05600C89D11 /* LPRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E69A20E4E05600C89D11 /* LPRootViewController.swift */; };
 		1873251020E60E5300D2738D /* LPPhotoPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; };
 		1873251120E60E5300D2738D /* LPPhotoPickerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18DDDC8620E4E72900AA8E45 /* LPRootSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8520E4E72900AA8E45 /* LPRootSwitchCell.swift */; };
-		18DDDC8A20E4E75500AA8E45 /* LPRootTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8920E4E75500AA8E45 /* LPRootTextFieldCell.swift */; };
+		18DDDC8620E4E72900AA8E45 /* LPRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */; };
 		18DDDC8C20E4E89100AA8E45 /* LPRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */; };
 		18DDDC8E20E4E94700AA8E45 /* LPRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -43,8 +42,7 @@
 		1817495920E47E450056D7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1827E69A20E4E05600C89D11 /* LPRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootViewController.swift; sourceTree = "<group>"; };
 		1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18DDDC8520E4E72900AA8E45 /* LPRootSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootSwitchCell.swift; sourceTree = "<group>"; };
-		18DDDC8920E4E75500AA8E45 /* LPRootTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootTextFieldCell.swift; sourceTree = "<group>"; };
+		18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootCell.swift; sourceTree = "<group>"; };
 		18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootModel.swift; sourceTree = "<group>"; };
 		18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +81,7 @@
 			children = (
 				1817494D20E47E440056D7DA /* LPAppDelegate.swift */,
 				1827E69A20E4E05600C89D11 /* LPRootViewController.swift */,
-				18DDDC8520E4E72900AA8E45 /* LPRootSwitchCell.swift */,
-				18DDDC8920E4E75500AA8E45 /* LPRootTextFieldCell.swift */,
+				18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */,
 				18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */,
 				18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */,
 				1817495120E47E440056D7DA /* LPMain.storyboard */,
@@ -169,10 +166,9 @@
 			files = (
 				18DDDC8E20E4E94700AA8E45 /* LPRootViewModel.swift in Sources */,
 				1817494E20E47E440056D7DA /* LPAppDelegate.swift in Sources */,
-				18DDDC8A20E4E75500AA8E45 /* LPRootTextFieldCell.swift in Sources */,
 				1827E69B20E4E05600C89D11 /* LPRootViewController.swift in Sources */,
 				18DDDC8C20E4E89100AA8E45 /* LPRootModel.swift in Sources */,
-				18DDDC8620E4E72900AA8E45 /* LPRootSwitchCell.swift in Sources */,
+				18DDDC8620E4E72900AA8E45 /* LPRootCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

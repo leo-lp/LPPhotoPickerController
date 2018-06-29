@@ -8,12 +8,17 @@
 
 import UIKit
 
-enum YLRootCellValue {
+enum YLRootValue {
     case isOn(Bool)
     case number(Int)
 }
 
-struct LPRootModel {
+class LPRootModel {
     var title: String
-    var value: YLRootCellValue
+    var value: YLRootValue
+    
+    init(title: String, value: YLRootValue) {
+        self.title = title
+        self.value = value
+    }
 }

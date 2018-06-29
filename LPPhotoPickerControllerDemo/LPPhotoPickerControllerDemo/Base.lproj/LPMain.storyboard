@@ -13,7 +13,7 @@
         <scene sceneID="7bu-W7-pQ5">
             <objects>
                 <tableViewController id="sqZ-Is-KLq" customClass="LPRootViewController" customModule="LPPhotoPickerControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sU6-Jk-SrH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="400" id="sU6-Jk-SrH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -23,7 +23,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="ORW-RM-4wx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LPRootSwitchCell" rowHeight="44" id="ORW-RM-4wx" customClass="LPRootSwitchCell" customModule="LPPhotoPickerControllerDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ORW-RM-4wx" id="kBI-OJ-69Z">
@@ -49,15 +49,19 @@
                                         <constraint firstItem="vpv-9d-eOx" firstAttribute="leading" secondItem="6VN-Wo-Iox" secondAttribute="trailing" constant="15" id="yLh-PA-gUg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="switch" destination="vpv-9d-eOx" id="NeK-Ta-5XH"/>
+                                    <outlet property="titleLabel" destination="6VN-Wo-Iox" id="JCP-0n-2e0"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="8ub-vT-1b6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LPRootTextFieldCell" rowHeight="44" id="8ub-vT-1b6" customClass="LPRootTextFieldCell" customModule="LPPhotoPickerControllerDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ub-vT-1b6" id="8gO-dV-rY4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yh-jw-wQB">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0yh-jw-wQB">
                                             <rect key="frame" x="290" y="6" width="51" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="51" id="kJE-Sa-97p"/>
@@ -82,6 +86,10 @@
                                         <constraint firstItem="0yh-jw-wQB" firstAttribute="leading" secondItem="qpr-yH-1Pz" secondAttribute="trailing" constant="15" id="s3h-4S-OBN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="0yh-jw-wQB" id="m4R-Xh-f2G"/>
+                                    <outlet property="titleLabel" destination="qpr-yH-1Pz" id="ePC-7x-Vbq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
