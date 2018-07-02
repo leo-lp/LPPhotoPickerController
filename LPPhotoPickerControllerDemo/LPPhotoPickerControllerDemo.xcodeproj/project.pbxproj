@@ -12,21 +12,24 @@
 		1817495520E47E450056D7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1817495420E47E450056D7DA /* Assets.xcassets */; };
 		1817495820E47E450056D7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1817495620E47E450056D7DA /* LaunchScreen.storyboard */; };
 		1827E69B20E4E05600C89D11 /* LPRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E69A20E4E05600C89D11 /* LPRootViewController.swift */; };
-		1873251020E60E5300D2738D /* LPPhotoPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; };
-		1873251120E60E5300D2738D /* LPPhotoPickerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1861E94920E9D2A800C65168 /* LPRootSelectedPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E94820E9D2A800C65168 /* LPRootSelectedPhotosView.swift */; };
+		1861E94C20E9D46900C65168 /* LPRootSelectedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E94A20E9D46900C65168 /* LPRootSelectedPhotoCell.swift */; };
+		1861E94D20E9D46900C65168 /* LPRootSelectedPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1861E94B20E9D46900C65168 /* LPRootSelectedPhotoCell.xib */; };
+		1861E95820EA002F00C65168 /* LPPhotoPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1861E95720EA002F00C65168 /* LPPhotoPickerController.framework */; };
+		1861E95920EA002F00C65168 /* LPPhotoPickerController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1861E95720EA002F00C65168 /* LPPhotoPickerController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18DDDC8620E4E72900AA8E45 /* LPRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */; };
 		18DDDC8C20E4E89100AA8E45 /* LPRootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */; };
 		18DDDC8E20E4E94700AA8E45 /* LPRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1827E69920E4DF0400C89D11 /* Embed Frameworks */ = {
+		1861E95420E9FF5200C65168 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1873251120E60E5300D2738D /* LPPhotoPickerController.framework in Embed Frameworks */,
+				1861E95920EA002F00C65168 /* LPPhotoPickerController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +44,10 @@
 		1817495720E47E450056D7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1817495920E47E450056D7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1827E69A20E4E05600C89D11 /* LPRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootViewController.swift; sourceTree = "<group>"; };
-		1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1861E94820E9D2A800C65168 /* LPRootSelectedPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootSelectedPhotosView.swift; sourceTree = "<group>"; };
+		1861E94A20E9D46900C65168 /* LPRootSelectedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootSelectedPhotoCell.swift; sourceTree = "<group>"; };
+		1861E94B20E9D46900C65168 /* LPRootSelectedPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LPRootSelectedPhotoCell.xib; sourceTree = "<group>"; };
+		1861E95720EA002F00C65168 /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootCell.swift; sourceTree = "<group>"; };
 		18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootModel.swift; sourceTree = "<group>"; };
 		18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPRootViewModel.swift; sourceTree = "<group>"; };
@@ -52,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1873251020E60E5300D2738D /* LPPhotoPickerController.framework in Frameworks */,
+				1861E95820EA002F00C65168 /* LPPhotoPickerController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +68,7 @@
 		1817494120E47E440056D7DA = {
 			isa = PBXGroup;
 			children = (
-				1873250F20E60E5300D2738D /* LPPhotoPickerController.framework */,
+				1861E95720EA002F00C65168 /* LPPhotoPickerController.framework */,
 				1817494C20E47E440056D7DA /* LPPhotoPickerControllerDemo */,
 				1817494B20E47E440056D7DA /* Products */,
 			);
@@ -84,6 +90,9 @@
 				18DDDC8520E4E72900AA8E45 /* LPRootCell.swift */,
 				18DDDC8D20E4E94700AA8E45 /* LPRootViewModel.swift */,
 				18DDDC8B20E4E89100AA8E45 /* LPRootModel.swift */,
+				1861E94820E9D2A800C65168 /* LPRootSelectedPhotosView.swift */,
+				1861E94A20E9D46900C65168 /* LPRootSelectedPhotoCell.swift */,
+				1861E94B20E9D46900C65168 /* LPRootSelectedPhotoCell.xib */,
 				1817495120E47E440056D7DA /* LPMain.storyboard */,
 				1817495420E47E450056D7DA /* Assets.xcassets */,
 				1817495620E47E450056D7DA /* LaunchScreen.storyboard */,
@@ -102,7 +111,7 @@
 				1817494620E47E440056D7DA /* Sources */,
 				1817494720E47E440056D7DA /* Frameworks */,
 				1817494820E47E440056D7DA /* Resources */,
-				1827E69920E4DF0400C89D11 /* Embed Frameworks */,
+				1861E95420E9FF5200C65168 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +163,7 @@
 				1817495820E47E450056D7DA /* LaunchScreen.storyboard in Resources */,
 				1817495520E47E450056D7DA /* Assets.xcassets in Resources */,
 				1817495320E47E440056D7DA /* LPMain.storyboard in Resources */,
+				1861E94D20E9D46900C65168 /* LPRootSelectedPhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +176,8 @@
 			files = (
 				18DDDC8E20E4E94700AA8E45 /* LPRootViewModel.swift in Sources */,
 				1817494E20E47E440056D7DA /* LPAppDelegate.swift in Sources */,
+				1861E94C20E9D46900C65168 /* LPRootSelectedPhotoCell.swift in Sources */,
+				1861E94920E9D2A800C65168 /* LPRootSelectedPhotosView.swift in Sources */,
 				1827E69B20E4E05600C89D11 /* LPRootViewController.swift in Sources */,
 				18DDDC8C20E4E89100AA8E45 /* LPRootModel.swift in Sources */,
 				18DDDC8620E4E72900AA8E45 /* LPRootCell.swift in Sources */,

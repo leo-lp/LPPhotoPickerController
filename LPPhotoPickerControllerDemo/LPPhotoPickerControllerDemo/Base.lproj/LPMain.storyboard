@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="Je7-ud-bA4">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Je7-ud-bA4" customClass="LPRootSelectedPhotosView" customModule="LPPhotoPickerControllerDemo" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="116" width="375" height="400"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,6 +98,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="LPPhotoPicker" id="2ED-5g-ntj"/>
+                    <connections>
+                        <outlet property="selectedPhotosView" destination="Je7-ud-bA4" id="4jY-X3-Hd1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-Fm-9VP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

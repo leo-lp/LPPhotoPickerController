@@ -9,6 +9,8 @@
 import UIKit
 
 class LPRootViewController: UITableViewController {
+    @IBOutlet weak var selectedPhotosView: LPRootSelectedPhotosView!
+    
     let vm = LPRootViewModel()
     
     override func viewDidLoad() {

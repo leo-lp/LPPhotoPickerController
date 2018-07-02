@@ -6,9 +6,30 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1861E95020E9D90D00C65168 /* LPPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1861E94F20E9D90D00C65168 /* LPPhotoBrowser.framework */; };
+		1861E95620E9FFD600C65168 /* LPPhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95520E9FFD600C65168 /* LPPhotoPickerController.swift */; };
+		1861E95B20EA016100C65168 /* LPPhotoPickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95A20EA016100C65168 /* LPPhotoPickerConfiguration.swift */; };
+		1861E95D20EA037C00C65168 /* LPPhotoPickerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95C20EA037C00C65168 /* LPPhotoPickerProtocol.swift */; };
+		1861E95F20EA04D900C65168 /* LPPhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95E20EA04D900C65168 /* LPPhotoListController.swift */; };
+		1861E96120EA051200C65168 /* LPPhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E96020EA051200C65168 /* LPPhotoListViewModel.swift */; };
+		1861E96520EA058700C65168 /* LPAlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E96420EA058700C65168 /* LPAlbumListController.swift */; };
+		1861E96720EA05DA00C65168 /* LPAlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E96620EA05DA00C65168 /* LPAlbumListCell.swift */; };
+		1861E96A20EA089B00C65168 /* LPPhotoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E96920EA089B00C65168 /* LPPhotoSession.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1817496920E47E5C0056D7DA /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1817496D20E47E5C0056D7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1861E94F20E9D90D00C65168 /* LPPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1861E95520E9FFD600C65168 /* LPPhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoPickerController.swift; sourceTree = "<group>"; };
+		1861E95A20EA016100C65168 /* LPPhotoPickerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoPickerConfiguration.swift; sourceTree = "<group>"; };
+		1861E95C20EA037C00C65168 /* LPPhotoPickerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoPickerProtocol.swift; sourceTree = "<group>"; };
+		1861E95E20EA04D900C65168 /* LPPhotoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoListController.swift; sourceTree = "<group>"; };
+		1861E96020EA051200C65168 /* LPPhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoListViewModel.swift; sourceTree = "<group>"; };
+		1861E96420EA058700C65168 /* LPAlbumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPAlbumListController.swift; sourceTree = "<group>"; };
+		1861E96620EA05DA00C65168 /* LPAlbumListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPAlbumListCell.swift; sourceTree = "<group>"; };
+		1861E96920EA089B00C65168 /* LPPhotoSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -16,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1861E95020E9D90D00C65168 /* LPPhotoBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,6 +49,7 @@
 			children = (
 				1817496B20E47E5C0056D7DA /* Sources */,
 				1817496A20E47E5C0056D7DA /* Products */,
+				1861E94E20E9D90D00C65168 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,9 +64,49 @@
 		1817496B20E47E5C0056D7DA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1861E95520E9FFD600C65168 /* LPPhotoPickerController.swift */,
+				1861E95A20EA016100C65168 /* LPPhotoPickerConfiguration.swift */,
+				1861E95C20EA037C00C65168 /* LPPhotoPickerProtocol.swift */,
+				1861E96220EA052500C65168 /* PhotoList */,
+				1861E96320EA054F00C65168 /* AlbumList */,
+				1861E96820EA088300C65168 /* PhotoSession */,
 				1817496D20E47E5C0056D7DA /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		1861E94E20E9D90D00C65168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1861E94F20E9D90D00C65168 /* LPPhotoBrowser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1861E96220EA052500C65168 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				1861E95E20EA04D900C65168 /* LPPhotoListController.swift */,
+				1861E96020EA051200C65168 /* LPPhotoListViewModel.swift */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		1861E96320EA054F00C65168 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				1861E96420EA058700C65168 /* LPAlbumListController.swift */,
+				1861E96620EA05DA00C65168 /* LPAlbumListCell.swift */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		1861E96820EA088300C65168 /* PhotoSession */ = {
+			isa = PBXGroup;
+			children = (
+				1861E96920EA089B00C65168 /* LPPhotoSession.swift */,
+			);
+			path = PhotoSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +151,7 @@
 				TargetAttributes = {
 					1817496820E47E5C0056D7DA = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -123,6 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1861E96A20EA089B00C65168 /* LPPhotoSession.swift in Sources */,
+				1861E96120EA051200C65168 /* LPPhotoListViewModel.swift in Sources */,
+				1861E96520EA058700C65168 /* LPAlbumListController.swift in Sources */,
+				1861E95F20EA04D900C65168 /* LPPhotoListController.swift in Sources */,
+				1861E96720EA05DA00C65168 /* LPAlbumListCell.swift in Sources */,
+				1861E95B20EA016100C65168 /* LPPhotoPickerConfiguration.swift in Sources */,
+				1861E95D20EA037C00C65168 /* LPPhotoPickerProtocol.swift in Sources */,
+				1861E95620E9FFD600C65168 /* LPPhotoPickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +324,7 @@
 		1817497220E47E5C0056D7DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -269,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lp.waowang.LPPhotoPickerController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -277,6 +351,7 @@
 		1817497320E47E5C0056D7DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
