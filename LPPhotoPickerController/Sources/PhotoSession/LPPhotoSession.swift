@@ -9,112 +9,112 @@
 import Photos
 import LPPhotoBrowser
 
-public class LPPhotoSession: LPPhotoManager {
+public class LPPhotoSession {
     public static let shared: LPPhotoSession = { return LPPhotoSession() }()
+    public var config: LPPhotoSessionConfiguration = LPPhotoSessionConfiguration()
     
+    private var queue: DispatchQueue = DispatchQueue(label: "com.lp.LPPhotoPickerController.LPPhotoSession")
 }
-//class YLImageManager {
-//    static let shared: YLImageManager = { return YLImageManager() }()
-//    let options: YLImagePickerOptions = YLImagePickerOptions()
-//}
-//
-//// MARK: - 获取Album（获得相册/相册数组）
-//
-//extension YLImageManager {
-//
-//    func cameraRollAlbum(isFetchAssets: Bool, completion: (YLAlbumModel) -> Void) {
-//        let option = PHFetchOptions()
-//        if !options.allowPickingVideo {
-//            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.image.rawValue)
-//        }
-//        if !options.allowPickingImage {
-//            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.video.rawValue)
-//        }
-//        if !options.sortAscendingByModificationDate {
-//            option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-//        }
-//
-//        let smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
-//        for idx in 0..<smartAlbums.count {
-//            let collection = smartAlbums[idx]
-//            /// 过滤空相册
-//            if collection.estimatedAssetCount <= 0 {
-//                continue
-//            }
-//            if isCameraRollAlbum(collection) {
-//                let fetchResult = PHAsset.fetchAssets(in: collection, options: option)
-//                let model = YLAlbumModel(result: fetchResult,
-//                                         name: collection.localizedTitle ?? "",
-//                                         isCameraRoll: true,
-//                                         isFetchAssets: isFetchAssets)
-//                return completion(model)
-//            }
-//        }
-//    }
-//
-//    func allAlbums(isFetchAssets: Bool, completion: ([YLAlbumModel]) -> Void) {
-//        var albumArr: [YLAlbumModel] = []
-//        let option = PHFetchOptions()
-//
-//        if !options.allowPickingVideo {
-//            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.image.rawValue)
-//        }
-//        if !options.allowPickingImage {
-//            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.video.rawValue)
-//        }
-//        if !options.sortAscendingByModificationDate {
-//            option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-//        }
-//
-//        /// 我的照片流 PHFetchResult<PHAssetCollection>, PHFetchResult<PHCollection>, PHFetchResult<PHCollectionList>
-//        let myPhotoStreamAlbum = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumMyPhotoStream, options: nil)
-//        let smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
-//        let topLevelUserCollections = PHCollectionList.fetchTopLevelUserCollections(with: nil)
-//        let syncedAlbums = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumSyncedAlbum, options: nil)
-//        let sharedAlbums = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumCloudShared, options: nil)
-//
-//        func process(_ collection: PHAssetCollection) {
-//            // 过滤空相册
-//            if collection.estimatedAssetCount <= 0 { return }
-//
-//            let fetchResult = PHAsset.fetchAssets(in: collection, options: option)
-//            if fetchResult.count < 1 { return }
-//
-//            let albumName = collection.localizedTitle ?? ""
-//            /// 是否手动控制该相册是否选择
-//            if let delegate = options.delegate,
-//                !delegate.isAlbumCanSelect(to: albumName, result: fetchResult) { return }
-//
-//            if albumName.contains("Hidden") || albumName == "已隐藏" { return }
-//            if albumName.contains("Deleted") || albumName == "最近删除" { return }
-//
-//            let isCameraRoll = isCameraRollAlbum(collection)
-//            let model = YLAlbumModel(result: fetchResult,
-//                                     name: albumName,
-//                                     isCameraRoll: isCameraRoll,
-//                                     isFetchAssets: isFetchAssets)
-//            if isCameraRoll {
-//                albumArr.insert(model, at: 0)
-//            } else {
-//                albumArr.append(model)
-//            }
-//        }
-//
-//        for fetchResult in [myPhotoStreamAlbum, smartAlbums, syncedAlbums, sharedAlbums] {
-//            for idx in 0..<fetchResult.count {
-//                process(fetchResult[idx])
-//            }
-//        }
-//        for idx in 0..<topLevelUserCollections.count {
-//            let collection = topLevelUserCollections[idx]
-//            //print("cis PHCollectionList=\(collection is PHCollectionList), cis PHAssetCollection=\(collection is PHAssetCollection)")
-//            if let collection = collection as? PHAssetCollection {
-//                process(collection)
-//            }
-//        }
-//        completion(albumArr)
-//    }
-//
+
+// MARK: - 获得相册 / 相册列表
+
+public extension LPPhotoSession {
+    
+    func cameraRollAlbum(isFetchAssets: Bool, completion: (LPAlbum) -> Void) {
+        let option = PHFetchOptions()
+        if !config.allowPickingVideo {
+            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.image.rawValue)
+        }
+        if !config.allowPickingPhoto {
+            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.video.rawValue)
+        }
+        if !config.sortAscendingByModificationDate {
+            option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        }
+        
+        let smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
+        
+        //        for idx in 0..<smartAlbums.count {
+        //            let collection = smartAlbums[idx]
+        //            /// 过滤空相册
+        //            if collection.estimatedAssetCount <= 0 {
+        //                continue
+        //            }
+        //            if isCameraRollAlbum(collection) {
+        //                let fetchResult = PHAsset.fetchAssets(in: collection, options: option)
+        //                let model = YLAlbumModel(result: fetchResult,
+        //                                         name: collection.localizedTitle ?? "",
+        //                                         isCameraRoll: true,
+        //                                         isFetchAssets: isFetchAssets)
+        //                return completion(model)
+        //            }
+        //        }
+    }
+    
+    func allAlbums(isFetchAssets: Bool, completion: ([LPAlbum]) -> Void) {
+        //        var albumArr: [YLAlbumModel] = []
+        //        let option = PHFetchOptions()
+        //
+        //        if !options.allowPickingVideo {
+        //            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.image.rawValue)
+        //        }
+        //        if !options.allowPickingImage {
+        //            option.predicate = NSPredicate(format: "mediaType == %ld", PHAssetMediaType.video.rawValue)
+        //        }
+        //        if !options.sortAscendingByModificationDate {
+        //            option.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        //        }
+        //
+        //        /// 我的照片流 PHFetchResult<PHAssetCollection>, PHFetchResult<PHCollection>, PHFetchResult<PHCollectionList>
+        //        let myPhotoStreamAlbum = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumMyPhotoStream, options: nil)
+        //        let smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
+        //        let topLevelUserCollections = PHCollectionList.fetchTopLevelUserCollections(with: nil)
+        //        let syncedAlbums = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumSyncedAlbum, options: nil)
+        //        let sharedAlbums = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumCloudShared, options: nil)
+        //
+        //        func process(_ collection: PHAssetCollection) {
+        //            // 过滤空相册
+        //            if collection.estimatedAssetCount <= 0 { return }
+        //
+        //            let fetchResult = PHAsset.fetchAssets(in: collection, options: option)
+        //            if fetchResult.count < 1 { return }
+        //
+        //            let albumName = collection.localizedTitle ?? ""
+        //            /// 是否手动控制该相册是否选择
+        //            if let delegate = options.delegate,
+        //                !delegate.isAlbumCanSelect(to: albumName, result: fetchResult) { return }
+        //
+        //            if albumName.contains("Hidden") || albumName == "已隐藏" { return }
+        //            if albumName.contains("Deleted") || albumName == "最近删除" { return }
+        //
+        //            let isCameraRoll = isCameraRollAlbum(collection)
+        //            let model = YLAlbumModel(result: fetchResult,
+        //                                     name: albumName,
+        //                                     isCameraRoll: isCameraRoll,
+        //                                     isFetchAssets: isFetchAssets)
+        //            if isCameraRoll {
+        //                albumArr.insert(model, at: 0)
+        //            } else {
+        //                albumArr.append(model)
+        //            }
+        //        }
+        //
+        //        for fetchResult in [myPhotoStreamAlbum, smartAlbums, syncedAlbums, sharedAlbums] {
+        //            for idx in 0..<fetchResult.count {
+        //                process(fetchResult[idx])
+        //            }
+        //        }
+        //        for idx in 0..<topLevelUserCollections.count {
+        //            let collection = topLevelUserCollections[idx]
+        //            //print("cis PHCollectionList=\(collection is PHCollectionList), cis PHAssetCollection=\(collection is PHAssetCollection)")
+        //            if let collection = collection as? PHAssetCollection {
+        //                process(collection)
+        //            }
+        //        }
+        //        completion(albumArr)
+    }
+
+
 //    func isCameraRollAlbum(_ metadata: PHAssetCollection) -> Bool {
 //        let systemVersion = UIDevice.current.systemVersion
 //        var versionStr = systemVersion.replacingOccurrences(of: ".", with: "")
@@ -136,7 +136,7 @@ public class LPPhotoSession: LPPhotoManager {
 //            return metadata.assetCollectionSubtype == .smartAlbumUserLibrary
 //        }
 //    }
-//}
+}
 //
 //// MARK: - 获取Assets（获得照片/照片数组）
 //

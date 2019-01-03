@@ -20,7 +20,6 @@ public class LPPhotoPickerConfiguration {
     
     public init() { }
     
-    
     //    var selectedModels: [YLAssetModel] = [] // 用户选中过的图片数组
     //    var selectedAssets: [PHAsset] = [] { // 用户选中过的图片数组
     //        didSet { checkSelectedAssets() }

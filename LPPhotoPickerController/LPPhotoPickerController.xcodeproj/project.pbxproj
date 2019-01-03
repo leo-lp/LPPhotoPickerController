@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181687BE20EB8031006D561E /* LPPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181687BD20EB8031006D561E /* LPPhotoModel.swift */; };
+		181687C020EB8133006D561E /* LPPhotoSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181687BF20EB8133006D561E /* LPPhotoSessionConfiguration.swift */; };
 		1861E95020E9D90D00C65168 /* LPPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1861E94F20E9D90D00C65168 /* LPPhotoBrowser.framework */; };
 		1861E95620E9FFD600C65168 /* LPPhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95520E9FFD600C65168 /* LPPhotoPickerController.swift */; };
 		1861E95B20EA016100C65168 /* LPPhotoPickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861E95A20EA016100C65168 /* LPPhotoPickerConfiguration.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181687BD20EB8031006D561E /* LPPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoModel.swift; sourceTree = "<group>"; };
+		181687BF20EB8133006D561E /* LPPhotoSessionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPPhotoSessionConfiguration.swift; sourceTree = "<group>"; };
 		1817496920E47E5C0056D7DA /* LPPhotoPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LPPhotoPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1817496D20E47E5C0056D7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1861E94F20E9D90D00C65168 /* LPPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LPPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				1861E96920EA089B00C65168 /* LPPhotoSession.swift */,
+				181687BF20EB8133006D561E /* LPPhotoSessionConfiguration.swift */,
+				181687BD20EB8031006D561E /* LPPhotoModel.swift */,
 			);
 			path = PhotoSession;
 			sourceTree = "<group>";
@@ -189,9 +195,11 @@
 			files = (
 				1861E96A20EA089B00C65168 /* LPPhotoSession.swift in Sources */,
 				1861E96120EA051200C65168 /* LPPhotoListViewModel.swift in Sources */,
+				181687BE20EB8031006D561E /* LPPhotoModel.swift in Sources */,
 				1861E96520EA058700C65168 /* LPAlbumListController.swift in Sources */,
 				1861E95F20EA04D900C65168 /* LPPhotoListController.swift in Sources */,
 				1861E96720EA05DA00C65168 /* LPAlbumListCell.swift in Sources */,
+				181687C020EB8133006D561E /* LPPhotoSessionConfiguration.swift in Sources */,
 				1861E95B20EA016100C65168 /* LPPhotoPickerConfiguration.swift in Sources */,
 				1861E95D20EA037C00C65168 /* LPPhotoPickerProtocol.swift in Sources */,
 				1861E95620E9FFD600C65168 /* LPPhotoPickerController.swift in Sources */,
